@@ -2,6 +2,7 @@ package com.training.recyclerviewdemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -34,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Attach layout manager to recyclerView
         recyclerView.setLayoutManager(layoutManager);
+
+        // Add divider using the item animator
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, layoutManager.getOrientation());
+        recyclerView.addItemDecoration(dividerItemDecoration);
 
         // Attach the adapter to the recyclerView to populate the items
         personsAdapter = new PersonsAdapter(personList);
