@@ -34,3 +34,5 @@ captures/
 \.idea/workspace\.xml
 
 \.idea/
+
+app/app\.iml
