@@ -60,13 +60,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String name =txtAddName.getText().toString();
         int age;
         String gender = txtAddGender.getText().toString();
-        String regExString = "^[0-9]*$";
 
         if(name.isEmpty()&& txtAddAge.getText().toString().isEmpty()&&gender.isEmpty()){
             Toast.makeText(this, "Please fill all the fields and try again!", Toast.LENGTH_SHORT).show();
         }else if (name.isEmpty()){
             Toast.makeText(this, "Please enter the name!", Toast.LENGTH_SHORT).show();
-        }else if(txtAddAge.getText().toString().isEmpty()|| !txtAddAge.getText().toString().trim().matches(regExString)){
+        }else if(txtAddAge.getText().toString().isEmpty()){
             Toast.makeText(this, "please enter the age!", Toast.LENGTH_SHORT).show();
         }else if(gender.isEmpty()){
             Toast.makeText(this, "Please enter the gender!", Toast.LENGTH_SHORT).show();
@@ -81,6 +80,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // scroll to the top of the list
             recyclerView.scrollToPosition(topPos);
         }
-        
+
     }
 }
