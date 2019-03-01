@@ -32,6 +32,7 @@ public class PersonsAdapter extends RecyclerView.Adapter<PersonViewHolder> {
         // Get the data model based on position
         Person person = personList.get(position);
         personViewHolder.bind(person);
+
     }
 
     @Override
