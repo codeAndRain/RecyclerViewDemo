@@ -6,17 +6,64 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/add_person_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Add" />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/add_name"
+                android:hint="@string/enter_name"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/add_age"
+                android:hint="@string/enter_age"
+                android:inputType="number"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/add_gender"
+                android:hint="@string/enter_gender"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/add_person_button"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Add" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/person_recycler_view"
         android:layout_width="match_parent"
-        android:scrollbars="vertical"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
 
 
 </LinearLayout>

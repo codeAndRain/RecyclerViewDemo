@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RecyclerViewDemo</string>
     <string name="Add">Add Person</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_age">Enter Age</string>
+    <string name="enter_gender">Enter Gender</string>
 </resources>
